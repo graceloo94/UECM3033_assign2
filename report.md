@@ -41,7 +41,7 @@ Put here your picture file (Watchtower_coast.jpg)
 ![Watchtower_coast.jpg](Watchtower_coast.jpg)
 
 How many non zero element in $\Sigma$?
-All the elements (R,G,B) in $\Sigma$  are non zero elements.
+All the elements in $\Sigma$  are non zero elements.
 
 Put here your lower and better resolution pictures. Explain how you generate
 these pictures from `task2.py`.
