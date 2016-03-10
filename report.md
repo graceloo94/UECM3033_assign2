@@ -13,11 +13,24 @@ The reports, codes and supporting documents are to be uploaded to Github at:
 [https://github.com/graceloo94/UECM3033_assign2](https://github.com/graceloo94/UECM3033_assign2)
 
 Explain your selection criteria here.
-In order to decide which method to solve for matrix A, we will need to check if matrix A is positive definite. We can find the eigenvalues of A and check if A is symmetry to determine if it is positive definite. SOR method will be used if matrix A is positive definite, else,  LU decomposition will be used. In order to use SOR method, matrix A needs to be positive definite to find an optimal ω that will converge. 
+In order to decide which method to solve for matrix A, we will need to check if matrix A is positive definite. We can use the Choleski Method to factorised matrix A into LL(Transpose) to determine if it is positive definite. SOR method will be used if matrix A is positive definite, else,  LU decomposition will be used. In order to use SOR method, matrix A needs to be positive definite to find an optimal ω that will converge, whereby 0 < ω < 2.
 
 Explain how you implement your `task1.py` here.
+To solve by LU decomposition method, there are 2 self-defined function used. LU_decomp(A) which takes in matrix A, and will decomposed it into LU matrix. lu(A,b) is a function which solve and return matrix A and also b by taking in from LU_decomp(A).
+
+To solve by SOR method,  we need to find the maximum absolute eigenvalue to compute the ω. 
+
+$$ω = \frac{2[1-{\sqrt{1-[p(T)]^2)}}]}{[p(T)]^2} $$
+whereby pT is the spectral radius. To ensure convergence, the value of ω need to be within 0 < ω < 2.
+
+We start by initialising x(0) as a zero matrix. We will then compute x(j) until the desired iteration. ( I have set the iteration limit to 100). It will return list(sol).
+
+The condition will determined if matrix A will be solved by LU or SOR method. If matrix A is a positive definite matrix, whereby it can be factorised into LL(Transpose) which is the Cholesky Method, we will use SOR method to solve it. Else, the matrix will be solved by LU decomposition method.
 
 
+Results : Both matrices are solved by LU decomposition method. 
+First matrix : [ 1. 1. 1.] 
+Second matrix : [ 1. -1. 4. -3.5 7. -1. ]
 ---------------------------------------------------------
 
 ## Task 2 -- SVD method and image compression
@@ -47,7 +60,7 @@ To prevent any loss of information for the matrix, we first create a copy of the
 
 
 What is a sparse matrix?
-A sparse matrix is a matrix whereby most of the elements are zero. The matrix is considered dense if most of the elements are nonzero. In task 1, when the first 30 elements of $\Sigma$ is kept, and all the other elements are set to zero, a sparse matrix is formed. The dimension of $\Sigma$ is changed from (800,1) to (800,1000). Thus, a large sparse matrix of (800,1000) is formed. When combining U and V using dot multiplication, a lower resolution pictures is created.
+A sparse matrix is a matrix whereby most of the elements are zero. The matrix is considered dense if most of the elements are nonzero. In task 2, when the first 30 elements of $\Sigma$ is kept, and all the other elements are set to zero, a sparse matrix is formed. The dimension of $\Sigma$ is changed from (800,1) to (800,1000). Thus, a large sparse matrix of (800,1000) is formed. When combining U and V using dot multiplication, a lower resolution pictures is created.
 
 -----------------------------------
 
