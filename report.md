@@ -43,7 +43,7 @@ Better resolution picture : $\Sigma_{200}$
 
 A chosen image with resolution of 1000x800 pixels is uploaded and read in the r,g,b format which is a 3 dimensional matrix. Then, we find the U,$\Sigma$ and V of the red, green, blue matrices respectively by using scipy.linalg.svd. Next, we find the non zero elements in $\Sigma$ by using numpy.count_nonzero. A lower resolution matrix is formed by keeping the first 30 non zero elements in $\Sigma$, and setting the other non zero elements to zero. The process can be repeated to find a better resolution matrix for the image as shown in the figures above.
 
-To prevent any loss of information for the matrix, we first create a copy of the original $\Sigma$ for all the red, green blue matrices such as Sred.copy. After this, we will start to keep the first n non zero elements and setting the others to zero. The new $\Sigma$ generated for each r, g, b matrices is then converted from (800,1) into (800,1000) by using scipy.linalg.diagsvd to perform dot multiplication for U,$\Sigma$,V by using numpy.dot. Thus, a new matrix can be created to generate images of lower or better resolutions.
+To prevent any loss of information for the matrix, we first create a copy of the original $\Sigma$ for all the red, green, blue matrices such as Sred.copy. After this, we will start to keep the first n non zero elements and setting the others to zero. The new $\Sigma$ generated for each r, g, b matrices is then converted from (800,1) into (800,1000) by using scipy.linalg.diagsvd to perform dot multiplication for U,$\Sigma$,V by using numpy.dot. Thus, a new matrix can be created to generate images of lower or better resolutions.
 
 
 What is a sparse matrix?
