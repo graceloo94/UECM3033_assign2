@@ -33,7 +33,7 @@ Put here your lower and better resolution pictures. Explain how you generate
 these pictures from `task2.py`.
 
 Original image:
-![original.png](original.png)
+![original .png](original .png)
 
 Lower resolution picture: $\Sigma_{30}$
 ![svd_30.png](svd_30.png)
