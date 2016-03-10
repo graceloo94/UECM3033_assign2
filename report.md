@@ -1,4 +1,4 @@
-UECM3033 Assignment #2 Report
+UUECM3033 Assignment #2 Report
 ========================================================
 
 - Prepared by: ** Loo Li Ping**
@@ -31,6 +31,7 @@ The condition will determined if matrix A will be solved by LU or SOR method. If
 Results : Both matrices are solved by LU decomposition method. 
 First matrix : [ 1. 1. 1.] 
 Second matrix : [ 1. -1. 4. -3.5 7. -1. ]
+
 ---------------------------------------------------------
 
 ## Task 2 -- SVD method and image compression
@@ -65,4 +66,3 @@ A sparse matrix is a matrix whereby most of the elements are zero. The matrix is
 -----------------------------------
 
 <sup>last modified: 11 March 2016</sup>
-
