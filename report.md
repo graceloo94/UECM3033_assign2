@@ -13,7 +13,7 @@ The reports, codes and supporting documents are to be uploaded to Github at:
 [https://github.com/graceloo94/UECM3033_assign2](https://github.com/graceloo94/UECM3033_assign2)
 
 Explain your selection criteria here.
-In order to decide which method to solve for matrix A, we will need to check if matrix A is positive definite. We can use the Choleski Method to factorised matrix A into LL(Transpose) to determine if it is positive definite. SOR method will be used if matrix A is positive definite, else,  LU decomposition will be used. In order to use SOR method, matrix A needs to be positive definite to find an optimal ω that will converge, whereby 0 < ω < 2.
+In order to decide which method to solve for matrix A, we will need to check if matrix A is positive definite. We can use the Cholesky Method to factorised matrix A into LL(Transpose) to determine if it is positive definite. SOR method will be used if matrix A is positive definite, else,  LU decomposition will be used. In order to use SOR method, matrix A needs to be positive definite to find an optimal ω that will converge, whereby 0 < ω < 2.
 
 Explain how you implement your `task1.py` here.
 To solve by LU decomposition method, there are 2 self-defined function used. LU_decomp(A) which takes in matrix A, and will decomposed it into LU matrix. lu(A,b) is a function which solve and return matrix A and also b by taking in from LU_decomp(A).
@@ -30,7 +30,7 @@ The condition will determined if matrix A will be solved by LU or SOR method. If
 
 Results : Both matrices are solved by LU decomposition method. 
 First matrix : [ 1. 1. 1.] 
-Second matrix : [ 1. -1. 4. -3.5 7. -1. ]
+Second matrix : [ 1. -1. 4. -3.5  7. -1. ]
 
 ---------------------------------------------------------
 
